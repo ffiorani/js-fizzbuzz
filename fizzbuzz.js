@@ -1,4 +1,15 @@
 // This is our main function
+
+function fizzprint(message, i) {
+    if (i % 11 == 0) {
+        console.log("Bong")
+    } else if (message.length != 0) {
+        console.log(message);
+    } else {
+        console.log(i);
+    }
+}
+
 function fizzbuzz() {
     let n = 105;
 
@@ -16,11 +27,7 @@ function fizzbuzz() {
             message += "Bang";
         }
 
-        if (message.length != 0) {
-            console.log(message);
-        } else {
-            console.log(i);
-        }
+        fizzprint(message, i);
     }
 }
 
