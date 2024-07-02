@@ -1,16 +1,25 @@
 // This is our main function
 function fizzbuzz() {
-    let n = 100;
+    let n = 105;
 
     for (let i = 1; i <= n; i++) {
+        let message = ""
+        if (i % 3 == 0) {
+            message += "Fizz";
+        }
+
         if (i % 5 == 0) {
-            if (i % 3 == 0) {
-                console.log("FizzBuzz!");
-            } else {
-                console.log("Buzz");
-            }
-        } else if (i % 3 == 0) {
-            console.log("Fizz");
+            message += "Buzz";
+        }
+
+        if (i % 7 == 0) {
+            message += "Bang";
+        }
+
+        if (message.length != 0) {
+            console.log(message);
+        } else {
+            console.log(i);
         }
     }
 }
