@@ -11,19 +11,11 @@ function fizzprint(message, i) {
     }
 }
 
-// function find_index_first_word_starting_with_letter(array_of_strings, letter) {
-//     for (let i = 0; i < array_of_strings.length; i++) {
-//         if (array_of_strings[i].startsWith(letter)) {
-//             return i;
-//         }
-//     }
-// }
-
-function fizzbuzz(max_number = 100, three_rule = true, five_rule = true, seven_rule = true, eleven_rule = true, thirteen_rule = true, seventeen_rule = true) {
-    // let max_number = parseInt(prompt("Up to what number do you want to FizzBuzz? ", "0"), 10);
-    // while (Number.isNaN(max_number) || max_number < 1) {
-    //     max_number = parseInt(prompt("Sorry, I did not get that. Please enter a positive integer: ", "0"), 10);
-    // }
+function fizzbuzz(three_rule = true, five_rule = true, seven_rule = true, eleven_rule = true, thirteen_rule = true, seventeen_rule = true) {
+    let max_number = parseInt(prompt("Up to what number do you want to FizzBuzz? ", "0"), 10);
+    while (Number.isNaN(max_number) || max_number < 1) {
+        max_number = parseInt(prompt("Sorry, I did not get that. Please enter a positive integer: ", "0"), 10);
+    }
 
     var answer = [];
 
@@ -65,7 +57,7 @@ function fizzbuzz(max_number = 100, three_rule = true, five_rule = true, seven_r
         } else {
             answer.push(message);
         }
-        // fizzprint(message, i);
+        fizzprint(message, i);
     }
 
     return answer;
@@ -73,5 +65,3 @@ function fizzbuzz(max_number = 100, three_rule = true, five_rule = true, seven_r
 
 // Now, we run the main function:
 fizzbuzz();
-
-module.exports = fizzbuzz;
