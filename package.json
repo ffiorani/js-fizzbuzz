@@ -1,0 +1,27 @@
+{
+  "name": "prompt-sync",
+  "version": "1.0.0",
+  "description": "This is our first programming exercise in the bootcamp. We will write some code to play the game \"FizzBuzz\". The requirements for this game can be found [here](FizzBuzzSpec.md).",
+  "main": "fizzbuzz.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ffiorani/js-fizzbuzz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ffiorani/js-fizzbuzz/issues"
+  },
+  "homepage": "https://github.com/ffiorani/js-fizzbuzz#readme",
+  "dependencies": {
+    "lodas": "^1.2.0",
+    "lodash": "^4.17.21",
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
