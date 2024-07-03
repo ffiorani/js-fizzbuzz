@@ -11,13 +11,47 @@ function fizzprint(message, i) {
     }
 }
 
-function fizzbuzz(three_rule = true, five_rule = true, seven_rule = true, eleven_rule = true, thirteen_rule = true, seventeen_rule = true) {
+function fizzbuzz() {
     let max_number = parseInt(prompt("Up to what number do you want to FizzBuzz? ", "0"), 10);
     while (Number.isNaN(max_number) || max_number < 1) {
         max_number = parseInt(prompt("Sorry, I did not get that. Please enter a positive integer: ", "0"), 10);
     }
 
-    var answer = [];
+    const rule_nums = {
+        "three_rule": true, 
+        "five_rule": true, 
+        "seven_rule": true, 
+        "eleven_rule": true,
+        "thirteen_rule": true, 
+        "seventeen_rule": true
+    }
+
+    for (var rule_str in rule_nums) {
+        let accept_rule = parseInt(prompt("Do you want to use the " + rule_str + " rule? Insert 0 for no or 1 for yes: ", "0"), 10);
+        while (accept_rule != 0 && accept_rule != 1) {
+            accept_rule = parseInt(prompt("Sorry, I did not get that. Please enter either 0 or 1: ", "0"), 10);
+        }
+
+        if (accept_rule === 0) {
+            rule_nums[rule_str] = false;
+        }
+    }
+    console.log(rule_nums);
+
+    const { 
+        three_rule, 
+        five_rule, 
+        seven_rule, 
+        eleven_rule, 
+        thirteen_rule, 
+        seventeen_rule 
+    } = rule_nums;
+
+    console.log(three_rule);
+    // Now that we have determined the number up to which we want to FizzBuzz and the rules we want to use,
+    // we determine the output
+
+    const answer = [];
 
     for (let i = 1; i <= max_number; i++) {
         var words = []
